@@ -5,7 +5,7 @@
 			<!-- 也会放在 ，作用插槽中，组件中如果有 作用域插槽，则不适合使用匿名插槽 -->
 			<!-- 	<template> ccc </template> -->
 			<template slot="bbb">
-				bbb
+				bbb-b
 			</template>
 
 			<template slot="aaa">

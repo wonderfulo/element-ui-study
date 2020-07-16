@@ -14,6 +14,7 @@
 			
 			<!-- 作用域组件的意义 ：可以把 本该放到 子组件中的 孙子组件的提升到 父组件中，
 			 避免 层层向上 传递 $emit-->
+			 
 			<slot v-for="value in list" :val=value>
 				
 			</slot>
