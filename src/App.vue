@@ -87,6 +87,10 @@
 					{
 						path: '/uploadManual',
 						component: 'uploadManual'
+					},
+					{
+						path: '/rate',
+						component: 'rate'
 					}
 				]
 			}

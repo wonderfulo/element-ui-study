@@ -13,6 +13,7 @@ import uploadHeadPortrait from '../pages/upload/uploadHeadPortrait.vue'
 import uploadFileThumbnail from '../pages/upload/uploadFileThumbnail.vue'
 import uploadImageThumbnail from '../pages/upload/uploadImageThumbnail.vue'
 import uploadManual from '../pages/upload/uploadManual.vue'
+import rate from '../pages/rate/rate.vue'
 
 const routes = [
 	{
@@ -72,8 +73,8 @@ const routes = [
 		component: uploadImageThumbnail
 	},
 	{
-		path: '/uploadManual',
-		component: uploadManual
+		path: '/rate',
+		component: rate
 	}
 ]
 
