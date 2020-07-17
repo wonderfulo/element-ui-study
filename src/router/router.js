@@ -11,6 +11,8 @@ import cascaderDynamicLoading from '../pages/cascader/cascaderDynamicLoading.vue
 import upload from '../pages/upload/upload.vue'
 import uploadHeadPortrait from '../pages/upload/uploadHeadPortrait.vue'
 import uploadFileThumbnail from '../pages/upload/uploadFileThumbnail.vue'
+import uploadImageThumbnail from '../pages/upload/uploadImageThumbnail.vue'
+import uploadManual from '../pages/upload/uploadManual.vue'
 
 const routes = [
 	{
@@ -64,6 +66,14 @@ const routes = [
 	{
 		path: '/uploadFileThumbnail',
 		component: uploadFileThumbnail
+	},
+	{
+		path: '/uploadImageThumbnail',
+		component: uploadImageThumbnail
+	},
+	{
+		path: '/uploadManual',
+		component: uploadManual
 	}
 ]
 

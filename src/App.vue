@@ -79,6 +79,14 @@
 					{
 						path: '/uploadFileThumbnail',
 						component: 'uploadFileThumbnail'
+					},
+					{
+						path: '/uploadImageThumbnail',
+						component: 'uploadImageThumbnail'
+					},
+					{
+						path: '/uploadManual',
+						component: 'uploadManual'
 					}
 				]
 			}
