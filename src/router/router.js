@@ -2,10 +2,10 @@ import notification from '../pages/notification.vue'
 import input from '../pages/input.vue'
 import slotTest from '../pages/slot-test.vue'
 import checkbox from '../pages/checkbox.vue'
-import select from '../pages/select.vue'
-import selectGroup from '../pages/selectGroup.vue'
-import selectByQuery from '../pages/selectByQuery.vue'
-import selectByRemoteQuery from '../pages/selectByRemoteQuery.vue'
+import select from '../pages/select/select.vue'
+import selectGroup from '../pages/select/selectGroup.vue'
+import selectByQuery from '../pages/select/selectByQuery.vue'
+import selectByRemoteQuery from '../pages/select/selectByRemoteQuery.vue'
 
 const routes = [
 	{
