@@ -91,6 +91,10 @@
 					{
 						path: '/rate',
 						component: 'rate'
+					},
+					{
+						path: '/transfer',
+						component: 'transfer'
 					}
 				]
 			}
