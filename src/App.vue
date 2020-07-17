@@ -43,6 +43,22 @@
 					{
 						path: '/checkbox',
 						component: 'checkbox'
+					},
+					{
+						path: '/select',
+						component: 'select'
+					},
+					{
+						path: '/selectGroup',
+						component: 'selectGroup'
+					},
+					{
+						path: '/selectByQuery',
+						component: 'selectByQuery'
+					},
+					{
+						path: '/selectByRemoteQuery',
+						component: 'selectByRemoteQuery'
 					}
 				]
 			}
