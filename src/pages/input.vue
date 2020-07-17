@@ -1,13 +1,29 @@
 <template>
 	<el-row class="demo-autocomplete">
-		<el-col :span="12">
+		<el-col :span="6">
 			<div class="sub-title">激活即列出输入建议</div>
 			<el-autocomplete class="inline-input" v-model="state1" :fetch-suggestions="querySearch" placeholder="请输入内容" @select="handleSelect"></el-autocomplete>
 		</el-col>
-		<el-col :span="12">
+		<el-col :span="6">
 			<div class="sub-title">输入后匹配输入建议</div>
 			<el-autocomplete class="inline-input" v-model="state2" :fetch-suggestions="querySearch" placeholder="请输入内容"
 			 :trigger-on-focus="false" @select="handleSelect"></el-autocomplete>
+		</el-col>
+		<el-col :span="6">
+			<div class="sub-title">自定义显示模板</div>
+			<el-autocomplete popper-class="my-autocomplete" v-model="state" :fetch-suggestions="querySearch" placeholder="请输入内容"
+			 @select="handleSelect">
+				<i class="el-icon-edit el-input__icon" slot="suffix" @click="handleIconClick">
+				</i>
+				<template slot-scope="{ item }">
+					<div class="name">{{ item.value }}</div>
+					<span class="addr">{{ item.address }}</span>
+				</template>
+			</el-autocomplete>
+		</el-col>
+		<el-col :span="6">
+			<div class="sub-title">从远程获取数据</div>
+			<el-autocomplete v-model="state" :fetch-suggestions="querySearchAsync" placeholder="请输入内容" @select="handleSelect"></el-autocomplete>
 		</el-col>
 	</el-row>
 </template>
@@ -17,8 +33,10 @@
 		data() {
 			return {
 				restaurants: [],
+				state: '',
 				state1: '',
-				state2: ''
+				state2: '',
+				timeout: null
 			};
 		},
 		methods: {
@@ -31,6 +49,18 @@
 				var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants;
 				// 调用 callback 返回建议列表的数据
 				cb(results);
+			},
+			querySearchAsync(queryString, cb) {
+				var restaurants = this.restaurants;
+				var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants;
+
+				//js中的方法，用于清除时间间隔设置器
+				clearTimeout(this.timeout);
+				//设置时间间隔，用于模拟ajax请求
+				//在请求间隔之间，页面加载数据时，会显示一个 旋转的齿轮
+				this.timeout = setTimeout(() => {
+					cb(results);
+				}, 3000 * Math.random());
 			},
 			createFilter(queryString) {
 				return (restaurant) => {
