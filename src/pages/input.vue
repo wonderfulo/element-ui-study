@@ -264,6 +264,9 @@
 			},
 			handleSelect(item) {
 				console.log(item);
+			},
+			handleIconClick(ev) {
+				console.log(ev);
 			}
 		},
 		mounted() {

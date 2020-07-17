@@ -6,6 +6,11 @@ import select from '../pages/select/select.vue'
 import selectGroup from '../pages/select/selectGroup.vue'
 import selectByQuery from '../pages/select/selectByQuery.vue'
 import selectByRemoteQuery from '../pages/select/selectByRemoteQuery.vue'
+import cascader from '../pages/cascader/cascader.vue'
+import cascaderDynamicLoading from '../pages/cascader/cascaderDynamicLoading.vue'
+import upload from '../pages/upload/upload.vue'
+import uploadHeadPortrait from '../pages/upload/uploadHeadPortrait.vue'
+import uploadFileThumbnail from '../pages/upload/uploadFileThumbnail.vue'
 
 const routes = [
 	{
@@ -39,6 +44,26 @@ const routes = [
 	{
 		path: '/selectByRemoteQuery',
 		component: selectByRemoteQuery
+	},
+	{
+		path: '/cascader',
+		component: cascader
+	},
+	{
+		path: '/cascaderDynamicLoading',
+		component: cascaderDynamicLoading
+	},
+	{
+		path: '/upload',
+		component: upload
+	},
+	{
+		path: '/uploadHeadPortrait',
+		component: uploadHeadPortrait
+	},
+	{
+		path: '/uploadFileThumbnail',
+		component: uploadFileThumbnail
 	}
 ]
 
