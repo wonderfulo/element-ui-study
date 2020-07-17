@@ -39,6 +39,10 @@
 					{
 						path: '/slotTest',
 						component: 'slotTest'
+					},
+					{
+						path: '/checkbox',
+						component: 'checkbox'
 					}
 				]
 			}
