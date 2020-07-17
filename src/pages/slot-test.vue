@@ -16,9 +16,10 @@
 
 		</slotMe>
 		<slotMe>
-			<template slot-scope="props">
+			<!-- { xxx }:可以直接获得作用域对象的某一个属性 -->
+			<template slot-scope="{ val }">
 				<!--定义一个插槽，该插槽必须放在template标签内-->
-				<li>{{props.val}}</li>
+				<li>{{val}}</li>
 				<!-- 定义使用渲染方式 -->
 			</template>
 		</slotMe>
