@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div>远程搜索,可多选,可自行创建选项</div>
+		<div>远程搜索,可多选,可自行创建条目</div>
 		<el-row>
 			<el-col :span="24">
 				<!-- filterable：开启可搜索功能
