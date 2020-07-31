@@ -1,5 +1,5 @@
 <template>
-	<div id="app">111
+	<div id="app">
 		<img src="./assets/logo.png">
 		<div>
 			<span v-for="(item ,index) in testList" :key="index">
